@@ -27,8 +27,12 @@ repositories {
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web:$spring_boot_version"
     implementation "org.springframework.boot:spring-boot-starter-mail:$spring_boot_version"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa:$spring_boot_version"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:$spring_boot_version"
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit5'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation "org.mockito.kotlin:mockito-kotlin:3.2.0"
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.19.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.0'
 }
 
