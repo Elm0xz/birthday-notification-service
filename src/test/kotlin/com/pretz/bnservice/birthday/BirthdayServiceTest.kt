@@ -1,11 +1,5 @@
 package com.pretz.bnservice.birthday
 
-import com.pretz.bnservice.birthday.Birthday
-import com.pretz.bnservice.birthday.BirthdayRepository
-import com.pretz.bnservice.birthday.BirthdayService
-import com.pretz.bnservice.birthday.EarlierNotificationMode
-import com.pretz.bnservice.birthday.Notification
-import com.pretz.bnservice.birthday.NotificationRepository
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.junit.jupiter.MockitoExtension
@@ -117,6 +111,7 @@ class BirthdayServiceTest {
         verify(birthdayRepository).delete(Birthday("Alan Turing", MonthDay.of(6, 23), EarlierNotificationMode.NONE))
     }
 
+    //TODO
     @Ignore("Consider using in-memory db for this test in order to minimize mocking")
     @Test
     fun `should delete all notifications when deleting a birthday`() {
